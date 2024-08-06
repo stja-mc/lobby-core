@@ -66,10 +66,9 @@ public class LobbyGuardListeners implements Listener {
 
     @EventHandler
     public void onEntityAttackEntity(EntityDamageByEntityEvent event) {
-        if(!(event.getDamager() instanceof Player)) return;
+        if(!(event.getDamager() instanceof Player damager)) return;
         if(!lobbyguardConfig.getBoolean("prevent-attack", true)) return;
-        Player damage = (Player) event.getDamager();
-        if(this.buildModeRepository.isInBuilderMode(damage.getUniqueId())) return;
+        if(this.buildModeRepository.isInBuilderMode(damager.getUniqueId())) return;
         event.setCancelled(true);
     }
 

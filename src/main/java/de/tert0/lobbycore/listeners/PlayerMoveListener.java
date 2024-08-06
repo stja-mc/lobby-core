@@ -13,7 +13,6 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import java.util.*;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 public class PlayerMoveListener implements Listener {
     private final Logger logger;
@@ -50,7 +49,7 @@ public class PlayerMoveListener implements Listener {
 
         List<Portal> collisions = this.portals.stream()
                 .filter(portal -> portal.isColliding(position))
-                .collect(Collectors.toList());
+                .toList();
 
         if(!collisions.isEmpty()) {
             if(this.playersInPortal.contains(player.getUniqueId())) return;
