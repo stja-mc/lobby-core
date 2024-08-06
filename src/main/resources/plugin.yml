@@ -1,0 +1,8 @@
+name: LobbyCore
+version: '${project.version}'
+main: de.tert0.lobbycore.LobbyCore
+api-version: 1.19
+commands:
+  build:
+    description: Toggle Build Mode in the lobby
+    permission: lobbycore.build

@@ -1,0 +1,14 @@
+redis:
+  host: "localhost"
+lobbyguard:
+  prevent-break-block: true
+  prevent-break-place: true
+  prevent-interaction: true
+  prevent-explosions: true
+  prevent-damage: true
+  prevent-attack: true
+lobby-world: "world"
+portals:
+  - destination: server
+    corner1: 1 2 3
+    corner2: 4 5 6
